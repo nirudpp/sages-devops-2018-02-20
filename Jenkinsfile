@@ -19,11 +19,6 @@ pipeline {
             echo 'UI test'
           }
         }
-        stage('Integration Test') {
-          steps {
-            echo 'Integration Test'
-          }
-        }
       }
     }
     stage('Publish to Artifactory') {
