@@ -26,5 +26,10 @@ pipeline {
         echo 'artifactory'
       }
     }
+    stage('Sleep 1 s') {
+      steps {
+        sleep 1
+      }
+    }
   }
 }
