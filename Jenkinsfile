@@ -3,10 +3,10 @@ pipeline {
   stages {
     stage('Pull Request') {
       when {
-                expression { BRANCH_NAME ==~ /(nirudpp|feature|hotfix|bugfix)/ }
+               branch 'nirudpp'
             }
       steps {
-        sh 'echo ${env.GIT_BRANCH}'
+        sh "echo ${env.GIT_BRANCH}"
       }
     }
   }
