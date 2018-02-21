@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Pull Request') {
       when {
-               branch 'nirudpp'
+               branch 'nirudpp' | 'feature'
             }
       steps {
         sh "echo ${env.GIT_BRANCH}"
