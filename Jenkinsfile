@@ -1,34 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Kompilacja') {
+    stage('Pull Request') {
       steps {
-        sh 'echo \'mvn build\''
-      }
-    }
-    stage('Unit Test') {
-      parallel {
-        stage('Test') {
-          steps {
-            sh 'echo \'test\''
-            echo 'test 2'
-          }
-        }
-        stage('UI Test') {
-          steps {
-            echo 'UI test'
-          }
-        }
-      }
-    }
-    stage('Publish to Artifactory') {
-      steps {
-        echo 'artifactory'
-      }
-    }
-    stage('Sleep 1 s') {
-      steps {
-        sleep 1
+        sh 'echo \'start pipeline pull request\''
       }
     }
   }
